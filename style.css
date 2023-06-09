@@ -21,11 +21,3 @@
   align-items: center;
   justify-content: space-between;
 }
-
-.lower-section {
-  height: 100px;
-  width: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
