@@ -1,4 +1,3 @@
-// http://api.nbp.pl/api/exchangerates/rates/a/usd/
 const converterForm = document.getElementById("converter-form");
 const currencyValue = document.getElementById("currency-value");
 const currencySelect = document.getElementById("currency-select");
