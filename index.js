@@ -6,7 +6,7 @@ const currencyParagraph = document.getElementById("result-paragraph");
 
 function getCurrency(event) {
   event.preventDefault();
-  fetch(`http://api.nbp.pl/api/exchangerates/rates/a/${currencySelect.value}/`)
+  fetch(`https://api.nbp.pl/api/exchangerates/rates/a/${currencySelect.value}/`)
     .then((response) => response.json())
     .then((data) => {
       if (data.rates?.[0]?.mid) {
