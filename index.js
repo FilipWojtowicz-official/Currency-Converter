@@ -10,9 +10,10 @@ function getCurrency(event) {
     .then((response) => response.json())
     .then((data) => {
       if (data.rates?.[0]?.mid) {
-        currencyParagraph.innerHTML = `${(
-          Number(currencyValue.value) * data.rates[0].mid
-        ).toFixed(2)}PLN`;
+        currencyParagraph.innerHTML = `${calculateCurrency(
+          currencyValue.value,
+          data.rates[0].mid
+        )}PLN`;
       } else {
         alert("something goes wrong :( Come back later pliz");
       }
@@ -20,6 +21,10 @@ function getCurrency(event) {
     .catch(() => {
       alert("something goes wrong :( Come back later pliz");
     });
+}
+
+function calculateCurrency(value, rate) {
+  return (Number(value) * Number(rate)).toFixed(2);
 }
 
 converterForm.addEventListener("submit", getCurrency);
