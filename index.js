@@ -13,7 +13,7 @@ function getCurrency(event) {
         currencyParagraph.innerHTML = `${calculateCurrency(
           currencyValue.value,
           data.rates[0].mid
-        )}PLN`;
+        )} PLN`;
       } else {
         alert("something goes wrong :( Come back later pliz");
       }
